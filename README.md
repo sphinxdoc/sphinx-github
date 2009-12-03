@@ -1,6 +1,6 @@
 # Hosted Sphinx Documentation on GitHub #
 
-Serve the [http://sphinx.pocoo.org/](Sphinx) HTML formatted documentation of any Python project on [http://sphinxdoc.github.com](http://sphinxdoc.github.com)
+Serve the [Sphinx](http://sphinx.pocoo.org/) HTML formatted documentation of any Python project on [http://sphinxdoc.github.com](http://sphinxdoc.github.com)
 
 ## Add your project
 
@@ -13,8 +13,8 @@ In 10 minutes or so your project's documentation will be publically available at
 
 ## Documentation guidlines
 
-  * Documentation must be done in [http://sphinx.pocoo.org/](Sphinx)
+  * Documentation must be done in [Sphinx](http://sphinx.pocoo.org/)
   * Location of documentation may contain either
     * Text documenatation files and Sphinx config data (`conf.py` and `Makefile` generated from `sphinx-quickstart`)
-    * Built HTML documentation files in Shinx format
+    * Built HTML documentation files in Sphinx format
     
