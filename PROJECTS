@@ -1,0 +1,9 @@
+#############################
+# About this file
+#   This is where all projects are tracked. Edit this file to add your own.
+#   You must define the project to document and where the documentation is located within the project.
+#   Project identifiers follow PIP's formating for requirements: files http://pip.openplans.org/#requirements-files
+#   Format is ``<project_identifier> some whitespace <relative_documentation_path>`` per line.
+#############################
+git+git://github.com/justquick/django-native-tags.git#egg=native_tags   docs
+git+git://github.com/washingtontimes/django-staticmediamgr.git#egg=staticmediamgr   docs
