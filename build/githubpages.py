@@ -5,6 +5,7 @@ import re
 import os
 import conf
 
+BUILD = '_build'
 
 def slugify(value):
     """
@@ -15,7 +16,7 @@ def slugify(value):
     value = unicode(re.sub('[^\w\s-]', '', value).strip().lower())
     return re.sub('[-\s]+', '-', value)
 
-def converter(adir='./build/html'):
+def converter(adir='./%s/html' % BUILD):
     for f in os.listdir(adir):
         f = os.path.join(adir, f)
         if os.path.isfile(f) and f.endswith('.html'):
@@ -27,12 +28,12 @@ def converter(adir='./build/html'):
             
 converter()
 
-os.system('mv ./build/html/_static ./build/html/sphinx_static')
-os.system('mv ./build/html/_sources ./build/html/sphinx_sources')
+os.system('mv ./%s/html/_static ./%s/html/sphinx_static' % (BUILD, BUILD))
+os.system('mv ./%s/html/_sources ./%s/html/sphinx_sources' % (BUILD, BUILD))
 
 slug = slugify(conf.project)
-os.system('mv ./build/html ../sphinxdoc.github.com/%s' % slug)
-os.chdir('../sphinxdoc.github.com')
+os.system('mv ./%s/html ../../sphinxdoc.github.com/%s' % (BUILD, slug))
+os.chdir('../../sphinxdoc.github.com')
 os.system('git add %s' % slug)
 os.system('git commit %s -m "added %s"' % (slug, conf.project))
 os.system('git push origin master')
